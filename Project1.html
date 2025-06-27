@@ -251,7 +251,7 @@ footer {
 
     @media (max-width: 576px) {
       .project-card img {
-        height: 200px;
+        height: 250px;
       }
     }
 
@@ -324,6 +324,16 @@ footer {
 .arrow-btn:hover{
   color: #007bff;
 }
+.arrow-btn i {
+  display: inline-block;
+  transform: rotate(-40deg); /* Default rotated */
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover i {
+  transform: rotate(0deg); /* On hover, reset to 0 degrees */
+}
+
     </style>
 </head>
 <body>
@@ -436,7 +446,7 @@ footer {
           <div class="project-info">
             <div class="project-title">Cargo Shipping</div>
             <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut similique reprehenderit ratione corporis sit harum est molestias commodi beatae, quaerat blanditiis culpa ipsa ipsam iste iusto aperiam soluta repellendus!</div>
-      <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
+     <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
           </div>
         </div>
       </div>
@@ -447,7 +457,7 @@ footer {
           <div class="project-info">
             <div class="project-title">Road Transportation</div>
             <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi accusamus porro a dolore atque sit quod aperiam labore iusto. Unde libero corporis eius optio atque earum dolore fuga porro.</div>
-              <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
+               <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
           </div>
         </div>
       </div>
@@ -458,7 +468,7 @@ footer {
           <div class="project-info">
             <div class="project-title">Air Freight</div>
             <div class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus debitis eius est quod expedita minima! Repudiandae accusamus nemo reprehenderit sequi optio iure, ut, perspiciatis quos ipsam assumenda aspernatur excepturi?</div>
-            <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
+              <div class="arrow-btn">Read More <i class="fas fa-arrow-right ms-2"></i></div>
           </div>
         </div>
       </div>
