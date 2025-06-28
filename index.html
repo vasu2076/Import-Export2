@@ -573,14 +573,44 @@ footer {
       color: #666;
       margin: 0;
     }
-        .testimonial-section {
-      max-width: 500px;
+      .testimonial-badge {
+      display: inline-block;
+      background-color: #e7f0fa;
+      color: #3b82f6;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      margin-left: 35%;
+      text-decoration: none;
+    }
+
+    .testimonial-title {
+      font-size: clamp(24px, 5vw, 28px);
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #111827;
+      text-align: center;
+    }
+
+    .testimonial-description {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    .testimonial-section {
+      max-width: 600px;
       width: 100%;
       overflow: hidden;
       position: relative;
-       align-items: center;
-      justify-content: center;
-      margin: 5% 35%;
+      margin: 0 auto;
+      padding: 0 15px;
     }
 
     .slider-wrapper {
@@ -591,11 +621,12 @@ footer {
     .testimonial-card {
       min-width: 100%;
       box-sizing: border-box;
-       background: #f5f6fa;
-      padding: 30px 20px;
+      background: #ffffff;
+      padding: 30px 25px;
       border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
       text-align: center;
+      margin: 0 5px;
     }
 
     .testimonial-photo {
@@ -603,7 +634,9 @@ footer {
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
+      margin: 0 auto 15px;
+      display: block;
+      border: 3px solid #e7f0fa;
     }
 
     .testimonial-name {
@@ -620,7 +653,7 @@ footer {
     }
 
     .testimonial-text {
-      font-size: 14px;
+      font-size: 15px;
       color: #555;
       line-height: 1.6;
       margin-bottom: 20px;
@@ -629,26 +662,66 @@ footer {
     .testimonial-stars {
       font-size: 18px;
       color: #f1c40f;
+      margin-bottom: 10px;
     }
 
-    .dots {
-      text-align: center;
-      margin-top: 15px;
+    .slider-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 15px;
     }
 
-    .dots button {
-      border: none;
-      width: 10px;
-      height: 10px;
-      background: #ccc;
-      border-radius: 50%;
-      margin: 0 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .dots button.active {
+    .slider-nav button {
       background: #0984e3;
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.3s;
+    }
+
+    .slider-nav button:hover {
+      background: #0768b2;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        padding: 25px 20px;
+      }
+
+      .testimonial-photo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .testimonial-text {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-badge {
+        font-size: 13px;
+      }
+
+      .testimonial-title {
+        font-size: 22px;
+      }
+
+      .testimonial-description {
+        font-size: 14px;
+      }
+
+      .testimonial-card {
+        padding: 20px 15px;
+      }
     }
         .service-headings {
   text-align: center;
@@ -754,33 +827,6 @@ footer {
       font-size: 20px;
       font-weight: bold;
       color: #fff;
-    }
-     .testimonial-badge {
-      display: inline-block;
-      background-color: #e7f0fa;
-      color: #3b82f6;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      margin-left: 30%;
-      text-decoration: none;
-    }
-    .testimonial-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #111827;
-      text-align: center;
-    }
-    .testimonial-description {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
     }
       .contact-section {
       padding: 60px 20px;
@@ -1246,42 +1292,47 @@ html {
     </div>
   </section>
 
-   <section class="testimonial-section slide-up-element">
-     <a href="#" class="testimonial-badge">Our Testimonial</a>
+    <section class="testimonial-section">
+    <a href="#" class="testimonial-badge">Our Testimonial</a>
     <h2 class="testimonial-title">Trusted By Industry Leaders</h2>
-    <p class="testimonial-description mb-5">
+    <p class="testimonial-description">
       Their testimonials highlight our commitment to overcoming logistical challenges and delivering on our promises. Read on to discover.
     </p>
+    
     <div class="slider-wrapper">
       <div class="testimonial-card">
-        <img src="https://html.themexriver.com/fastrans/assets/img/testimonial/test2.1.jpg" alt="User Photo" class="testimonial-photo" />
+        <img src="https://html.themexriver.com/fastrans/assets/img/testimonial/test2.1.jpg" alt="Gallen Maxwell" class="testimonial-photo" />
         <h3 class="testimonial-name">Gallen Maxwell</h3>
-        <p class="testimonial-role">CEO $ Founder</p>
+        <p class="testimonial-role">CEO & Founder</p>
         <p class="testimonial-text">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolore eligendi et beatae, labore minus neque eveniet earum pariatur sunt esse mollitia magni atque natus! Consequatur hic voluptas vitae sequi!
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolore eligendi et beatae..."
         </p>
         <div class="testimonial-stars">★★★★★</div>
       </div>
       <div class="testimonial-card">
-        <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/testimonial/client-3.png" alt="User Photo" class="testimonial-photo" />
+        <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/testimonial/client-3.png" alt="Sarah Johnson" class="testimonial-photo" />
         <h3 class="testimonial-name">Sarah Johnson</h3>
-        <p class="testimonial-role">CEO $ Founder</p>
+        <p class="testimonial-role">Marketing Director</p>
         <p class="testimonial-text">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque minus rerum earum sapiente temporibus debitis dolorem aliquam a unde molestias eveniet magnam, ipsam laborum? Adipisci dolores saepe ipsam labore.
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque minus rerum earum..."
         </p>
         <div class="testimonial-stars">★★★★★</div>
       </div>
       <div class="testimonial-card">
-        <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/testimonial/client-2.png" alt="User Photo" class="testimonial-photo" />
+        <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/testimonial/client-2.png" alt="John Doe" class="testimonial-photo" />
         <h3 class="testimonial-name">John Doe</h3>
-        <p class="testimonial-role">CEO $ Founder</p>
+        <p class="testimonial-role">Operations Manager</p>
         <p class="testimonial-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illum eaque repellat sapiente. Accusamus odio doloribus et alias sed nam libero, repellat consequatur ipsam nostrum quia incidunt, neque corrupti nihil.
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illum eaque repellat sapiente..."
         </p>
         <div class="testimonial-stars">★★★★★</div>
       </div>
     </div>
-    <div class="dots"></div>
+    
+    <div class="slider-nav">
+      <button class="prev-btn" aria-label="Previous testimonial">&#10094;</button>
+      <button class="next-btn" aria-label="Next testimonial">&#10095;</button>
+    </div>
   </section>
 
   <section class="service-headings slide-up-element">
@@ -1565,37 +1616,45 @@ html {
     });
   </script>
    <script>
-    const wrapper = document.querySelector('.slider-wrapper');
-const slides = document.querySelectorAll('.testimonial-card');
-const dotsContainer = document.querySelector('.dots');
-let currentIndex = 0;
+   document.addEventListener('DOMContentLoaded', () => {
+      const wrapper = document.querySelector('.slider-wrapper');
+      const slides = document.querySelectorAll('.testimonial-card');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      const slideCount = slides.length;
+      let currentIndex = 0;
+      let autoSlideInterval;
 
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  if (i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => {
-    goToSlide(i);
-  });
-  dotsContainer.appendChild(dot);
-});
+      function goToSlide(index) {
+        if (index < 0) index = slideCount - 1;
+        if (index >= slideCount) index = 0;
+        currentIndex = index;
+        wrapper.style.transform = `translateX(-${index * 100}%)`;
+        resetAutoSlide();
+      }
 
-function goToSlide(index) {
-  wrapper.style.transform = `translateX(-${index * 100}%)`;
-  currentIndex = index;
-  updateDots();
-}
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
 
-function updateDots() {
-  const dots = dotsContainer.querySelectorAll('button');
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === currentIndex);
-  });
-}
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  goToSlide(currentIndex);
-}, 3000);
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+      }
+
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+
+      startAutoSlide();
+    });
 
 // slide up effect for this is 
     const elements = document.querySelectorAll('.slide-up-element');
